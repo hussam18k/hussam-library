@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع حسام للمصادر</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background-color: #f0f2f5; padding: 20px; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 400px; width: 100%; }
+        h2 { color: #1a73e8; }
+        input { width: 90%; padding: 12px; margin: 15px 0; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; }
+        button { width: 100%; padding: 12px; background: #1a73e8; color: white; border: none; border-radius: 8px; cursor: pointer; margin: 5px 0; font-size: 16px; font-weight: bold; }
+        button.archive { background: #333; }
+        button.iq { background: #008751; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>موقع حسام للمصادر</h2>
+        <p>ابحث في المستودعات العالمية والعراقية</p>
+        <input type="text" id="searchTerm" placeholder="اكتب اسم الكتاب أو الرسالة...">
+        <button onclick="window.open('https://scholar.google.com/scholar?q=' + document.getElementById('searchTerm').value)">البحث في Google Scholar</button>
+        <button class="archive" onclick="window.open('https://archive.org/details/texts?and[]=' + document.getElementById('searchTerm').value)">البحث في Archive.org</button>
+        <button class="iq" onclick="window.open('http://www.iqdr.iq/search?query=' + document.getElementById('searchTerm').value)">المستودع الرقمي العراقي</button>
+    </div>
+</body>
+</html>
